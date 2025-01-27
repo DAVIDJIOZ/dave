@@ -1,15 +1,6 @@
 {
-  "name": "miraculous-site",
-  "version": "1.0.0",
-  "description": "Miraculous Download site with Email and Password Verification",
   "dependencies": {
-    "firebase-admin": "^13.0.2",
-    "firebase-functions": "^3.19.0",
-    "emailjs-com": "^2.4.1"
-  },
-  "scripts": {
-    "start": "netlify dev",
-    "build": "netlify build",
-    "deploy": "netlify deploy"
+    "firebase-admin": "^11.0.1",   // Match versions recommended by Firebase docs
+    "firebase-functions": "^3.20.0"
   }
 }
