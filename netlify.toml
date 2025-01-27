@@ -1,0 +1,8 @@
+[build]
+  functions = "functions"
+  publish = "public"
+
+[[redirects]]
+  from = "/.netlify/*"
+  to = "/.netlify/*"
+  status = 200
