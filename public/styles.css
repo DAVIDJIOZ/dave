@@ -1,0 +1,145 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: #1a1a1a;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Ladybug-themed background */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #ff0000 10%, transparent 10%), radial-gradient(circle, #000 10%, transparent 10%);
+    background-size: 100px 100px;
+    background-position: 50px 50px;
+    opacity: 0.5;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background: #1e1e1e;
+    padding: 3em;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+}
+
+/* Title in rounded rectangle */
+.title-box {
+    background: linear-gradient(135deg, #ff4d4d, #1a1a1a);
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 30px rgba(255, 20, 147, 0.6);
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 0;
+}
+
+h1 .highlight {
+    color: #ff1a1a;
+    text-decoration: underline;
+    animation: glowPulse 2s infinite;
+}
+
+/* Ladybug placeholder */
+.image-placeholder {
+    margin: 20px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.image-placeholder img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #ff4d4d;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+/* Input styles */
+form {
+    display: grid;
+    gap: 1.5em;
+}
+
+input {
+    padding: 0.75em;
+    border: 1px solid #ff4d4d;
+    border-radius: 5px;
+    background: #2b2b2b;
+    color: #fff;
+    font-size: 1em;
+    transition: box-shadow 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    outline: none;
+}
+
+/* Button styles */
+button {
+    padding: 0.75em 1em;
+    border: none;
+    border-radius: 5px;
+    background: #ff0000;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    animation: zoomInOut 1.5s infinite;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 15px rgba(255, 20, 147, 0.8), 0 0 30px rgba(255, 20, 147, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 25px rgba(255, 20, 147, 1), 0 0 50px rgba(255, 20, 147, 0.8);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
